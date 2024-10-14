@@ -19,12 +19,12 @@ export default function Index() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-purple-200 p-4">
+    <div className="h-screen flex flex-col items-center justify-center bg-purple-200 p-4">
       {/* Background image placeholder */}
       <div
         className="absolute inset-0 bg-cover bg-center z-0"
         style={{
-          backgroundImage: "url('/bg-1.png?height=1080&width=1920')",
+          backgroundImage: "url('/bg-1.webp?height=1080&width=1920')",
         }}
       />
 
