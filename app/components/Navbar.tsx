@@ -9,12 +9,7 @@ export default function Navbar() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <motion.nav
-      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out"
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ type: "spring", velocity: 10 }}
-    >
+    <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between py-1.5 sm:py-2 bg-white rounded-full mt-6 px-6 shadow-sm">
           <div className="flex items-center">
@@ -26,17 +21,19 @@ export default function Navbar() {
               Dewi Laundry Binjai
             </Link>
           </div>
-          <div className="hidden lg:block">
-            <div className=" flex items-baseline space-x-4">
-              <NavLink to="/pricing">Harga</NavLink>
-              <NavLink to="/about">Tentang Kami</NavLink>
-              <NavLink to="/contact">Kontak</NavLink>
+          <div className="flex items-center gap-8">
+            <div className="hidden lg:block">
+              <div className=" flex items-baseline space-x-4">
+                <NavLink to="/pricing">Harga</NavLink>
+                <NavLink to="/about">Tentang Kami</NavLink>
+                <NavLink to="/contact">Kontak</NavLink>
+              </div>
             </div>
-          </div>
-          <div className="hidden md:block">
-            <button className="bg-gradient-to-r from-purple-400 to-purple-700 hover:brightness-110 text-white font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out">
-              Masuk
-            </button>
+            <div className="hidden md:block">
+              <button className="bg-gradient-to-r from-purple-400 to-purple-700 hover:brightness-110 text-white font-bold py-2 px-4 rounded-full transition duration-300 ease-in-out">
+                Masuk
+              </button>
+            </div>
           </div>
           <div className="md:hidden">
             <button
@@ -75,7 +72,7 @@ export default function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.nav>
+    </nav>
   );
 }
 
